@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:layout_gravity="center"
+    tools:context=".MainActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:fitsSystemWindows="true"
+        >
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/colorPrimary"
+            app:expandedTitleMarginStart="10dp"
+            app:expandedTitleMarginEnd="26dp"
+            app:layout_scrollFlags="scroll|enterAlwaysCollapsed|exitUntilCollapsed|snap"
+            >
+
+            <ImageView
+                android:id="@+id/iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/city"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax" />
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                app:layout_collapseMode="pin"
+                />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/activity_horizontal_margin">
+
+            <com.google.android.material.textfield.TextInputLayout
+
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/details_et_model_hint"
+                    android:padding="20dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/color"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:drawableLeft="@drawable/ic_color_lens_black_24dp"
+                    android:drawablePadding="14dp"
+                    android:hint="@string/et_color"
+                    android:padding="20dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/dpl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_local_gas_station_black_24dp"
+                    android:drawablePadding="14dp"
+                    android:hint="@string/density_per_letter"
+                    android:padding="20dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="@string/et_description"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:drawableLeft="@drawable/ic_details_black_24dp"
+                    android:drawablePadding="14dp"
+                    android:padding="20dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+
+     </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
